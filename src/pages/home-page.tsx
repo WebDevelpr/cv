@@ -45,6 +45,34 @@ export const HomePage = () => {
           </div>
         </div>
       </section>
+      <section className='container mt-12'>
+        <div className='flex h-12 w-max items-center justify-center bg-black'>
+          <h2 className='m-1 text-xl font-semibold text-white'>COURSES</h2>
+        </div>
+        <div className='mt-4 space-y-2 text-lg'>
+          <div>
+            <div className='flex justify-between'>
+              <p>Front-end Developer </p>
+              <p className='text-gray-400'>May, 2023 - August - 2023</p>
+            </div>
+            <p className='text-gray-400'>Group lessons</p>
+          </div>
+          <div className='mt-8'>
+            <div className='flex justify-between'>
+              <p>Front-end Developer </p>
+              <p className='text-gray-400'>January, 2024 - August, 2024</p>
+            </div>
+            <p className='text-gray-400'>Individual lessons</p>
+          </div>
+          <div className='mt-8'>
+            <div className='flex justify-between'>
+              <p>Front-end Developer </p>
+              <p className='text-gray-400'>August, 2024 - Present</p>
+            </div>
+            <p className='text-gray-400'>Self-study</p>
+          </div>
+        </div>
+      </section>
     </>
   )
 }
