@@ -1,7 +1,6 @@
+import { Button } from "@/components/ui/button";
 import { AlertTriangle } from "lucide-react";
 import { type FallbackProps } from "react-error-boundary";
-
-import { Button } from "@/components/ui/button";
 
 const NotFoundPage = ({ resetErrorBoundary, error }: FallbackProps) => {
   return (
@@ -11,11 +10,13 @@ const NotFoundPage = ({ resetErrorBoundary, error }: FallbackProps) => {
           <AlertTriangle className="h-12 w-12 text-red-600" />
         </div>
 
-        <h2 className="text-3xl font-bold tracking-tight">Щось пішло так</h2>
+        <h2 className="text-3xl font-bold tracking-tight">
+          Something went wrong
+        </h2>
 
         <p className="text-muted-foreground">
-          Сталася неочікувана помилка. Ймовірно, це тимчасова проблема, яку ми
-          виправляємо.
+          An unexpected error occurred. This is likely a temporary issue that we
+          are working on fixing.
         </p>
 
         <div className="bg-muted w-full overflow-auto rounded-md p-4 text-left text-sm">
@@ -29,7 +30,7 @@ const NotFoundPage = ({ resetErrorBoundary, error }: FallbackProps) => {
           )}
         </div>
 
-        <Button onClick={resetErrorBoundary}>Спробуйте знову</Button>
+        <Button onClick={resetErrorBoundary}>Try again</Button>
       </div>
     </section>
   );
