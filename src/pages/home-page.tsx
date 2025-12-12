@@ -1,4 +1,23 @@
 export const HomePage = () => {
+  const skills = [
+    { name: 'HTML', level: 'w-[95%]' },
+    { name: 'CSS', level: 'w-[85%]' },
+    { name: 'JavaScript', level: 'w-[70%]' },
+    { name: 'TypeScript', level: 'w-[75%]' },
+    { name: 'Tailwind', level: 'w-[85%]' },
+    { name: 'React', level: 'w-[75%]' },
+    { name: 'Vite', level: 'w-[80%]' },
+    { name: 'Git', level: 'w-[85%]' },
+    { name: 'GitHub', level: 'w-[70%]' },
+    { name: 'ShadCn', level: 'w-[90%]' }
+  ]
+
+  const language = [
+    { name: 'Ukrainian', level: 'w-[100%]' },
+    { name: 'Eglish', level: 'w-[89%]' },
+    { name: 'Poland', level: 'w-[40%]' }
+  ]
+
   return (
     <>
       <section className='container mt-12'>
@@ -8,7 +27,7 @@ export const HomePage = () => {
         <div className='mt-4 space-y-2 text-lg'>
           <p>49A Dehtiarivska Street, 01001, Kyiv, Kyiv City, Ukraine </p>
           <p>gudzoniya111@gmail.com</p>
-          <p>Date birth 26.08.2007</p>
+          <p>Date of birth 26.08.2007</p>
           <p>Citizenship: Ukraine</p>
           <p>
             <a
@@ -21,6 +40,7 @@ export const HomePage = () => {
           </p>
         </div>
       </section>
+
       <section className='container mt-12'>
         <div className='flex h-12 w-max items-center justify-center bg-black'>
           <h2 className='m-1 text-xl font-semibold text-white'>EDUCATION</h2>
@@ -33,7 +53,7 @@ export const HomePage = () => {
             <p className='text-gray-400'>2024 - Present</p>
           </div>
           <p>
-            Bachelor’s Degree, Computer Science (Specialty 122){' '}
+            Bachelor’s Degree, Computer Science (Specialty 122)
             <span className='font-semibold'>3nd-year student</span>
           </p>
           <div className='mt-8'>
@@ -45,6 +65,7 @@ export const HomePage = () => {
           </div>
         </div>
       </section>
+
       <section className='container mt-12'>
         <div className='flex h-12 w-max items-center justify-center bg-black'>
           <h2 className='m-1 text-xl font-semibold text-white'>COURSES</h2>
@@ -57,6 +78,7 @@ export const HomePage = () => {
             </div>
             <p className='text-gray-400'>Group lessons</p>
           </div>
+
           <div className='mt-8'>
             <div className='flex justify-between'>
               <p>Front-end Developer </p>
@@ -64,6 +86,7 @@ export const HomePage = () => {
             </div>
             <p className='text-gray-400'>Individual lessons</p>
           </div>
+
           <div className='mt-8'>
             <div className='flex justify-between'>
               <p>Front-end Developer </p>
@@ -71,6 +94,24 @@ export const HomePage = () => {
             </div>
             <p className='text-gray-400'>Self-study</p>
           </div>
+        </div>
+      </section>
+
+      <section className='container mt-12'>
+        <div className='flex h-12 w-max items-center justify-center bg-black'>
+          <h2 className='m-1 text-xl font-semibold text-white'>SKILLS</h2>
+        </div>
+
+        <div className='mt-4 grid grid-cols-2 gap-4'>
+          {skills.map((skill) => (
+            <div key={skill.name}>
+              <p className='font-medium'>{skill.name}</p>
+
+              <div className='mt-1 h-2 w-full bg-gray-300'>
+                <div className={`h-full bg-black ${skill.level}`}></div>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
     </>
