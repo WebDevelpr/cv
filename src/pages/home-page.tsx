@@ -14,8 +14,9 @@ export const HomePage = () => {
 
   const language = [
     { name: 'Ukrainian', level: 'w-[100%]' },
-    { name: 'Eglish', level: 'w-[89%]' },
-    { name: 'Poland', level: 'w-[40%]' }
+    { name: 'English', level: 'w-[85%]' },
+    { name: 'Poland', level: 'w-[40%]' },
+    { name: 'Russian', level: 'w-[90%]' }
   ]
 
   return (
@@ -101,7 +102,6 @@ export const HomePage = () => {
         <div className='flex h-12 w-max items-center justify-center bg-black'>
           <h2 className='m-1 text-xl font-semibold text-white'>SKILLS</h2>
         </div>
-
         <div className='mt-4 grid grid-cols-2 gap-4'>
           {skills.map((skill) => (
             <div key={skill.name}>
@@ -109,6 +109,22 @@ export const HomePage = () => {
 
               <div className='mt-1 h-2 w-full bg-gray-300'>
                 <div className={`h-full bg-black ${skill.level}`}></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section className='container mt-12'>
+        <div className='flex h-12 w-max items-center justify-center bg-black'>
+          <h2 className='m-1 text-xl font-semibold text-white'>LANGUAGE</h2>
+        </div>
+        <div className='mt-4 grid grid-cols-2 gap-4'>
+          {language.map((language) => (
+            <div key={language.name}>
+              <p className='font-medium'>{language.name}</p>
+
+              <div className='mt-1 h-2 w-full bg-gray-300'>
+                <div className={`h-full bg-black ${language.level}`}></div>
               </div>
             </div>
           ))}
