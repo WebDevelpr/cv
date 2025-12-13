@@ -16,11 +16,21 @@ import { Progress } from '@/components/ui/progress'
 import { useInView } from '@/hooks/useInView'
 
 export const HomePage = () => {
+  const { ref: personalRef, isVisible: personalVisible } = useInView()
+  const { ref: educationRef, isVisible: educationVisible } = useInView()
+  const { ref: coursesRef, isVisible: coursesVisible } = useInView()
   const { ref: skillsRef, isVisible: skillsVisible } = useInView()
   const { ref: langRef, isVisible: langVisible } = useInView()
+  const { ref: projectsRef, isVisible: projectsVisible } = useInView()
+
   return (
     <>
-      <section className='container mt-12'>
+      <section
+        ref={personalRef}
+        className={`container mt-12 transition-all duration-700 ease-out ${
+          personalVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+        }`}
+      >
         <div className='flex h-12 w-max items-center justify-center bg-black'>
           <h2 className='m-1 text-xl font-semibold text-white'>PERSONAL DATA</h2>
         </div>
@@ -53,7 +63,13 @@ export const HomePage = () => {
           </p>
         </div>
       </section>
-      <section className='container mt-12'>
+
+      <section
+        ref={educationRef}
+        className={`container mt-12 transition-all duration-700 ease-out ${
+          educationVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+        }`}
+      >
         <div className='flex h-12 w-max items-center justify-center bg-black'>
           <h2 className='m-1 text-xl font-semibold text-white'>EDUCATION</h2>
         </div>
@@ -78,7 +94,13 @@ export const HomePage = () => {
           </div>
         </div>
       </section>
-      <section className='container mt-12'>
+
+      <section
+        ref={coursesRef}
+        className={`container mt-12 transition-all duration-700 ease-out ${
+          coursesVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+        }`}
+      >
         <div className='flex h-12 w-max items-center justify-center bg-black'>
           <h2 className='m-1 text-xl font-semibold text-white'>COURSES</h2>
         </div>
@@ -117,9 +139,12 @@ export const HomePage = () => {
           </div>
         </div>
       </section>
+
       <section
         ref={skillsRef}
-        className='container mt-12'
+        className={`container mt-12 transition-all duration-700 ease-out ${
+          skillsVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+        }`}
       >
         <div className='flex h-12 w-max items-center justify-center bg-black'>
           <h2 className='m-1 text-xl font-semibold text-white'>SKILLS</h2>
@@ -170,12 +195,13 @@ export const HomePage = () => {
 
       <section
         ref={langRef}
-        className='container mt-12'
+        className={`container mt-12 transition-all duration-700 ease-out ${
+          langVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+        }`}
       >
         <div className='flex h-12 w-max items-center justify-center bg-black'>
           <h2 className='m-1 text-xl font-semibold text-white'>LANGUAGE</h2>
         </div>
-
         <div className='mt-4 grid grid-cols-2 gap-4'>
           <div>
             <h2 className='mb-1 font-semibold'>Ukrainian</h2>
@@ -195,7 +221,12 @@ export const HomePage = () => {
           </div>
         </div>
       </section>
-      <section className='container mt-12'>
+
+      <section
+        className={`container mt-12 transition-all duration-700 ease-out ${
+          langVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+        }`}
+      >
         <div className='flex h-12 w-max items-center justify-center bg-black'>
           <h2 className='m-1 text-xl font-semibold text-white'>LANGUAGE SKILLS</h2>
         </div>
@@ -246,7 +277,13 @@ export const HomePage = () => {
           </div>
         </div>
       </section>
-      <section className='container mt-12'>
+
+      <section
+        ref={projectsRef}
+        className={`container mt-12 transition-all duration-700 ease-out ${
+          projectsVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+        }`}
+      >
         <div className='flex h-12 w-max items-center justify-center bg-black'>
           <h2 className='m-1 text-xl font-semibold text-white'>PROJECTS</h2>
         </div>
@@ -282,6 +319,7 @@ export const HomePage = () => {
           </div>
         </div>
       </section>
+
       <section className='flex w-full flex-col items-center gap-6 bg-black py-16 text-white'>
         <p className='mt-6 text-sm text-gray-400'>© 2025 Dmytro Lebeichuk</p>
       </section>
