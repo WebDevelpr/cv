@@ -8,7 +8,7 @@ export const Header = () => {
         <img
           src={avatar}
           alt='Avatar'
-          className='h-48 w-48 rounded-full'
+          className='s h-48 w-48'
           loading='lazy'
         />
       </div>
