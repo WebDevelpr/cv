@@ -1,6 +1,9 @@
 import { Progress } from '@/components/ui/progress'
+import { useInView } from '@/hooks/useInView'
 
 export const HomePage = () => {
+  const { ref: skillsRef, isVisible: skillsVisible } = useInView()
+  const { ref: langRef, isVisible: langVisible } = useInView()
   return (
     <>
       <section className='container mt-12'>
@@ -24,7 +27,6 @@ export const HomePage = () => {
           </p>
         </div>
       </section>
-
       <section className='container mt-12'>
         <div className='flex h-12 w-max items-center justify-center bg-black'>
           <h2 className='m-1 text-xl font-semibold text-white'>EDUCATION</h2>
@@ -49,7 +51,6 @@ export const HomePage = () => {
           </div>
         </div>
       </section>
-
       <section className='container mt-12'>
         <div className='flex h-12 w-max items-center justify-center bg-black'>
           <h2 className='m-1 text-xl font-semibold text-white'>COURSES</h2>
@@ -80,75 +81,81 @@ export const HomePage = () => {
           </div>
         </div>
       </section>
-
-      <section className='container mt-12'>
+      <section
+        ref={skillsRef}
+        className='container mt-12'
+      >
         <div className='flex h-12 w-max items-center justify-center bg-black'>
           <h2 className='m-1 text-xl font-semibold text-white'>SKILLS</h2>
         </div>
         <div className='mt-4 grid grid-cols-2 gap-6'>
           <div>
             <h2 className='mb-1 font-semibold'>HTML</h2>
-            <Progress value={95} />
+            <Progress value={skillsVisible ? 95 : 0} />
           </div>
           <div>
             <h2 className='mb-1 font-semibold'>CSS</h2>
-            <Progress value={90} />
+            <Progress value={skillsVisible ? 90 : 0} />
           </div>
           <div>
             <h2 className='mb-1 font-semibold'>Tailwind</h2>
-            <Progress value={95} />
+            <Progress value={skillsVisible ? 95 : 0} />
           </div>
           <div>
             <h2 className='mb-1 font-semibold'>JavaScript</h2>
-            <Progress value={75} />
+            <Progress value={skillsVisible ? 75 : 0} />
           </div>
           <div>
             <h2 className='mb-1 font-semibold'>TypeScript</h2>
-            <Progress value={70} />
+            <Progress value={skillsVisible ? 70 : 0} />
           </div>
-
           <div>
             <h2 className='mb-1 font-semibold'>React</h2>
-            <Progress value={80} />
+            <Progress value={skillsVisible ? 80 : 0} />
           </div>
           <div>
             <h2 className='mb-1 font-semibold'>Git</h2>
-            <Progress value={85} />
+            <Progress value={skillsVisible ? 85 : 0} />
           </div>
           <div>
             <h2 className='mb-1 font-semibold'>Vite</h2>
-            <Progress value={90} />
+            <Progress value={skillsVisible ? 90 : 0} />
           </div>
           <div>
             <h2 className='mb-1 font-semibold'>GitHub</h2>
-            <Progress value={90} />
+            <Progress value={skillsVisible ? 90 : 0} />
           </div>
           <div>
             <h2 className='mb-1 font-semibold'>ShadCn</h2>
-            <Progress value={90} />
+            <Progress value={skillsVisible ? 90 : 0} />
           </div>
         </div>
       </section>
-      <section className='container mt-12'>
+
+      <section
+        ref={langRef}
+        className='container mt-12'
+      >
         <div className='flex h-12 w-max items-center justify-center bg-black'>
           <h2 className='m-1 text-xl font-semibold text-white'>LANGUAGE</h2>
         </div>
+
         <div className='mt-4 grid grid-cols-2 gap-4'>
           <div>
             <h2 className='mb-1 font-semibold'>Ukrainian</h2>
-            <Progress value={100} />
+            <Progress value={langVisible ? 100 : 0} />
           </div>
           <div>
             <h2 className='mb-1 font-semibold'>English</h2>
-            <Progress value={85} />
+            <Progress value={langVisible ? 85 : 0} />
           </div>
           <div>
             <h2 className='mb-1 font-semibold'>Russian</h2>
-            <Progress value={95} />
+            <Progress value={langVisible ? 95 : 0} />
           </div>
           <div>
             <h2 className='mb-1 font-semibold'>Polish</h2>
-            <Progress value={40} />
+            <Progress value={langVisible ? 40 : 0} />
           </div>
         </div>
       </section>
