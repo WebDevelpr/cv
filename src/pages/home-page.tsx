@@ -1,5 +1,4 @@
 import {
-  Book,
   Box,
   Calendar,
   Code,
