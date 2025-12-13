@@ -320,7 +320,7 @@ export const HomePage = () => {
         </div>
       </section>
 
-      <section className='flex w-full flex-col items-center gap-6 bg-black py-16 text-white'>
+      <section className='mt-12 flex w-full flex-col items-center gap-6 bg-black py-16 text-white'>
         <p className='mt-6 text-sm text-gray-400'>© 2025 Dmytro Lebeichuk</p>
       </section>
 
