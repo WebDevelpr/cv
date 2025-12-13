@@ -31,7 +31,7 @@ export const HomePage = () => {
           personalVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
         }`}
       >
-        <div className='flex h-12 w-max items-center justify-center bg-black'>
+        <div className='flex items-center justify-center bg-black sm:h-12 sm:w-max'>
           <h2 className='m-1 text-xl font-semibold text-white'>PERSONAL DATA</h2>
         </div>
         <div className='mt-4 space-y-2 text-lg'>
@@ -70,20 +70,19 @@ export const HomePage = () => {
           educationVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
         }`}
       >
-        <div className='flex h-12 w-max items-center justify-center bg-black'>
+        <div className='flex items-center justify-center bg-black sm:h-12 sm:w-max'>
           <h2 className='m-1 text-xl font-semibold text-white'>EDUCATION</h2>
         </div>
         <div className='mt-4 space-y-2 text-lg'>
           <div className='flex justify-between'>
             <p className='flex gap-1 font-semibold'>
-              <Book />
               Kyiv National Economic University named after Vadym Hetman
             </p>
             <p className='text-gray-400'>2024 - Present</p>
           </div>
-          <p>
+          <p className='mt-6 sm:mt-2'>
             Bachelor’s Degree, Computer Science (Specialty 122){' '}
-            <span className='font-semibold'>3nd-year student</span>
+            <span className='font-semibold'>3rd-year student</span>
           </p>
           <div className='mt-8'>
             <p>
@@ -101,39 +100,42 @@ export const HomePage = () => {
           coursesVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
         }`}
       >
-        <div className='flex h-12 w-max items-center justify-center bg-black'>
+        <div className='flex h-10 w-full items-center justify-center bg-black sm:h-12 sm:w-max'>
           <h2 className='m-1 text-xl font-semibold text-white'>COURSES</h2>
         </div>
-        <div className='mt-4 space-y-2 text-lg'>
+
+        <div className='mt-4 space-y-8 text-lg'>
           <div>
-            <div className='flex justify-between'>
+            <div className='flex flex-col items-start justify-between sm:flex-row sm:items-center'>
               <p className='flex gap-1'>
                 <Code />
-                Front-end Developer{' '}
+                Front-end Developer
               </p>
-              <p className='text-gray-400'>May, 2023 - August - 2023</p>
+              <p className='mt-2 text-gray-400 sm:mt-0'>May, 2023 - August - 2023</p>
             </div>
             <p className='text-gray-400'>Group lessons</p>
           </div>
 
-          <div className='mt-8'>
-            <div className='flex justify-between'>
+          <div>
+            <div className='flex flex-col items-start justify-between sm:flex-row sm:items-center'>
               <p className='flex gap-1'>
                 <Code />
-                Front-end Developer{' '}
+                Front-end Developer
               </p>
-              <p className='text-gray-400'>January, 2024 - August, 2024</p>
+              <p className='mt-2 text-gray-400 sm:mt-0'>
+                January, 2024 - August, 2024
+              </p>
             </div>
             <p className='text-gray-400'>Individual lessons</p>
           </div>
 
-          <div className='mt-8'>
-            <div className='flex justify-between'>
+          <div>
+            <div className='flex flex-col items-start justify-between sm:flex-row sm:items-center'>
               <p className='flex gap-1'>
                 <Code />
-                Front-end Developer{' '}
+                Front-end Developer
               </p>
-              <p className='text-gray-400'>August, 2024 - Present</p>
+              <p className='mt-2 text-gray-400 sm:mt-0'>August, 2024 - Present</p>
             </div>
             <p className='text-gray-400'>Self-study</p>
           </div>
@@ -146,10 +148,11 @@ export const HomePage = () => {
           skillsVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
         }`}
       >
-        <div className='flex h-12 w-max items-center justify-center bg-black'>
+        <div className='flex h-10 w-full items-center justify-center bg-black sm:h-12 sm:w-max'>
           <h2 className='m-1 text-xl font-semibold text-white'>SKILLS</h2>
         </div>
-        <div className='mt-4 grid grid-cols-2 gap-6'>
+
+        <div className='mt-4 grid grid-cols-2 gap-6 sm:grid-cols-2'>
           <div>
             <h2 className='mb-1 font-semibold'>HTML</h2>
             <Progress value={skillsVisible ? 95 : 0} />
@@ -199,7 +202,7 @@ export const HomePage = () => {
           langVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
         }`}
       >
-        <div className='flex h-12 w-max items-center justify-center bg-black'>
+        <div className='flex items-center justify-center bg-black sm:h-12 sm:w-max'>
           <h2 className='m-1 text-xl font-semibold text-white'>LANGUAGE</h2>
         </div>
         <div className='mt-4 grid grid-cols-2 gap-4'>
@@ -227,53 +230,55 @@ export const HomePage = () => {
           langVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
         }`}
       >
-        <div className='flex h-12 w-max items-center justify-center bg-black'>
-          <h2 className='m-1 text-xl font-semibold text-white'>LANGUAGE SKILLS</h2>
-        </div>
-        <div className='mt-4 space-y-2 text-lg'>
-          <div>
-            <h2 className='flex gap-1 font-bold'>
-              <Globe />
-              Ukrainian
-            </h2>
-            <p>Native proficiency</p>
+        <div>
+          <div className='flex items-center justify-center bg-black sm:h-12 sm:w-max'>
+            <h2 className='m-1 text-xl font-semibold text-white'>LANGUAGE SKILLS</h2>
           </div>
-          <div>
-            <h2 className='flex gap-1 font-bold'>
-              <Globe />
-              Russian
-            </h2>
-            <p>Native</p>
-          </div>
-          <div>
-            <h2 className='flex gap-1 font-bold'>
-              <Globe />
-              English
-            </h2>
-            <p>
-              High proficiency in English gained through{' '}
-              <span className='font-semibold'>
-                individual lessons, self-study, and regular practice communicating
-                with native speakers.
-              </span>
-            </p>
-            <p className='mt-4'>
-              Strong written and verbal communication skills, enabling smooth work
-              with English-language materials and teams.
-            </p>
-          </div>
-          <div>
-            <h2 className='flex gap-1 font-bold'>
-              <Globe />
-              Polish
-            </h2>
-            <p>
-              Basic to intermediate proficiency in Polish, developed through{' '}
-              <span className='font-semibold'>
-                lessons with a tutor and occasional communication while staying in
-                Poland.
-              </span>
-            </p>
+          <div className='mt-4 space-y-2 text-lg'>
+            <div>
+              <h2 className='flex gap-1 font-bold'>
+                <Globe />
+                Ukrainian
+              </h2>
+              <p>Native proficiency</p>
+            </div>
+            <div className='mt-10'>
+              <h2 className='flex gap-1 font-bold'>
+                <Globe />
+                Russian
+              </h2>
+              <p>Native</p>
+            </div>
+            <div className='mt-10'>
+              <h2 className='flex gap-1 font-bold'>
+                <Globe />
+                English
+              </h2>
+              <p>
+                High proficiency in English gained through{' '}
+                <span className='font-semibold'>
+                  individual lessons, self-study, and regular practice communicating
+                  with native speakers.
+                </span>
+              </p>
+              <p className='mt-4'>
+                Strong written and verbal communication skills, enabling smooth work
+                with English-language materials and teams.
+              </p>
+            </div>
+            <div className='mt-10'>
+              <h2 className='flex gap-1 font-bold'>
+                <Globe />
+                Polish
+              </h2>
+              <p>
+                Basic to intermediate proficiency in Polish, developed through{' '}
+                <span className='font-semibold'>
+                  lessons with a tutor and occasional communication while staying in
+                  Poland.
+                </span>
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -302,7 +307,7 @@ export const HomePage = () => {
             </p>
             <p>Created a responsive and user-friendly interface.</p>
           </div>
-          <div className='mt-8'>
+          <div className='mt-14'>
             <h2 className='flex gap-1 font-semibold'>
               <ShoppingCart />
               Pit Stop App
@@ -320,7 +325,7 @@ export const HomePage = () => {
         </div>
       </section>
 
-      <section className='mt-12 flex w-full flex-col items-center gap-6 bg-black py-16 text-white'>
+      <section className='mt-12 flex w-full items-center justify-center gap-6 bg-black py-16 text-white'>
         <p className='mt-6 text-sm text-gray-400'>© 2025 Dmytro Lebeichuk</p>
       </section>
 
