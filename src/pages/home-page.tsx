@@ -1,3 +1,17 @@
+import {
+  Book,
+  Box,
+  Calendar,
+  Code,
+  Flag,
+  Folder,
+  Globe,
+  House,
+  Link,
+  ShoppingCart
+} from 'lucide-react'
+
+import { BackToTop } from '@/components/backToTop'
 import { Progress } from '@/components/ui/progress'
 import { useInView } from '@/hooks/useInView'
 
@@ -11,17 +25,29 @@ export const HomePage = () => {
           <h2 className='m-1 text-xl font-semibold text-white'>PERSONAL DATA</h2>
         </div>
         <div className='mt-4 space-y-2 text-lg'>
-          <p>49A Dehtiarivska Street, 01001, Kyiv, Kyiv City, Ukraine </p>
-          <p>gudzoniya111@gmail.com</p>
-          <p>Date of birth 26.08.2007</p>
-          <p>Citizenship: Ukraine</p>
+          <p className='flex gap-1'>
+            <House />
+            49A Dehtiarivska Street, 01001, Kyiv, Kyiv City, Ukraine
+          </p>
+          <p className='flex gap-1'>
+            <Folder /> gudzoniya111@gmail.com
+          </p>
+          <p className='flex gap-1'>
+            <Calendar />
+            Date of birth 26.08.2007
+          </p>
+          <p className='flex gap-1'>
+            <Flag />
+            Citizenship: Ukraine
+          </p>
           <p>
             <a
               href='https://linkedin.com/in/dmytro-lebeichuk-1417513a0'
               target='_blank'
               rel='noopener noreferrer'
-              className='text-blue-500'
+              className='flex items-center gap-1 text-blue-500 transition hover:underline'
             >
+              <Link />
               LinkedIn
             </a>
           </p>
@@ -33,7 +59,8 @@ export const HomePage = () => {
         </div>
         <div className='mt-4 space-y-2 text-lg'>
           <div className='flex justify-between'>
-            <p className='font-semibold'>
+            <p className='flex gap-1 font-semibold'>
+              <Book />
               Kyiv National Economic University named after Vadym Hetman
             </p>
             <p className='text-gray-400'>2024 - Present</p>
@@ -58,7 +85,10 @@ export const HomePage = () => {
         <div className='mt-4 space-y-2 text-lg'>
           <div>
             <div className='flex justify-between'>
-              <p>Front-end Developer </p>
+              <p className='flex gap-1'>
+                <Code />
+                Front-end Developer{' '}
+              </p>
               <p className='text-gray-400'>May, 2023 - August - 2023</p>
             </div>
             <p className='text-gray-400'>Group lessons</p>
@@ -66,7 +96,10 @@ export const HomePage = () => {
 
           <div className='mt-8'>
             <div className='flex justify-between'>
-              <p>Front-end Developer </p>
+              <p className='flex gap-1'>
+                <Code />
+                Front-end Developer{' '}
+              </p>
               <p className='text-gray-400'>January, 2024 - August, 2024</p>
             </div>
             <p className='text-gray-400'>Individual lessons</p>
@@ -74,7 +107,10 @@ export const HomePage = () => {
 
           <div className='mt-8'>
             <div className='flex justify-between'>
-              <p>Front-end Developer </p>
+              <p className='flex gap-1'>
+                <Code />
+                Front-end Developer{' '}
+              </p>
               <p className='text-gray-400'>August, 2024 - Present</p>
             </div>
             <p className='text-gray-400'>Self-study</p>
@@ -165,15 +201,24 @@ export const HomePage = () => {
         </div>
         <div className='mt-4 space-y-2 text-lg'>
           <div>
-            <h2 className='font-bold'>Ukrainian</h2>
+            <h2 className='flex gap-1 font-bold'>
+              <Globe />
+              Ukrainian
+            </h2>
             <p>Native proficiency</p>
           </div>
           <div>
-            <h2 className='font-bold'>Russian</h2>
+            <h2 className='flex gap-1 font-bold'>
+              <Globe />
+              Russian
+            </h2>
             <p>Native</p>
           </div>
           <div>
-            <h2 className='font-bold'>English</h2>
+            <h2 className='flex gap-1 font-bold'>
+              <Globe />
+              English
+            </h2>
             <p>
               High proficiency in English gained through{' '}
               <span className='font-semibold'>
@@ -187,7 +232,10 @@ export const HomePage = () => {
             </p>
           </div>
           <div>
-            <h2 className='font-bold'>Polish</h2>
+            <h2 className='flex gap-1 font-bold'>
+              <Globe />
+              Polish
+            </h2>
             <p>
               Basic to intermediate proficiency in Polish, developed through{' '}
               <span className='font-semibold'>
@@ -204,7 +252,10 @@ export const HomePage = () => {
         </div>
         <div className='mt-4 space-y-2 text-lg'>
           <div>
-            <h2 className='font-semibold'>Link Manager</h2>
+            <h2 className='flex gap-1 font-semibold'>
+              <Box />
+              Link Manager
+            </h2>
             <p className='mb-4'>
               Developed a Link Manager web application using{' '}
               <span className='font-semibold'>
@@ -214,8 +265,11 @@ export const HomePage = () => {
             </p>
             <p>Created a responsive and user-friendly interface.</p>
           </div>
-          <div className='mt-4'>
-            <h2 className='font-semibold'>Pit Stop App</h2>
+          <div className='mt-8'>
+            <h2 className='flex gap-1 font-semibold'>
+              <ShoppingCart />
+              Pit Stop App
+            </h2>
             <p className='mb-4'>
               Developed an application for the{' '}
               <span className='font-semibold'>Pit Stop</span> store on my own
@@ -228,6 +282,7 @@ export const HomePage = () => {
           </div>
         </div>
       </section>
+      <BackToTop />
     </>
   )
 }
