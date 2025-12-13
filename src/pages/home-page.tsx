@@ -37,7 +37,7 @@ export const HomePage = () => {
             <p className='text-gray-400'>2024 - Present</p>
           </div>
           <p>
-            Bachelor’s Degree, Computer Science (Specialty 122)
+            Bachelor’s Degree, Computer Science (Specialty 122){' '}
             <span className='font-semibold'>3nd-year student</span>
           </p>
           <div className='mt-8'>
@@ -149,6 +149,75 @@ export const HomePage = () => {
           <div>
             <h2 className='mb-1 font-semibold'>Polish</h2>
             <Progress value={40} />
+          </div>
+        </div>
+      </section>
+      <section className='container mt-12'>
+        <div className='flex h-12 w-max items-center justify-center bg-black'>
+          <h2 className='m-1 text-xl font-semibold text-white'>LANGUAGE SKILLS</h2>
+        </div>
+        <div className='mt-4 space-y-2 text-lg'>
+          <div>
+            <h2 className='font-bold'>Ukrainian</h2>
+            <p>Native proficiency</p>
+          </div>
+          <div>
+            <h2 className='font-bold'>Russian</h2>
+            <p>Native</p>
+          </div>
+          <div>
+            <h2 className='font-bold'>English</h2>
+            <p>
+              High proficiency in English gained through{' '}
+              <span className='font-semibold'>
+                individual lessons, self-study, and regular practice communicating
+                with native speakers.
+              </span>
+            </p>
+            <p className='mt-4'>
+              Strong written and verbal communication skills, enabling smooth work
+              with English-language materials and teams.
+            </p>
+          </div>
+          <div>
+            <h2 className='font-bold'>Polish</h2>
+            <p>
+              Basic to intermediate proficiency in Polish, developed through{' '}
+              <span className='font-semibold'>
+                lessons with a tutor and occasional communication while staying in
+                Poland.
+              </span>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className='container mt-12'>
+        <div className='flex h-12 w-max items-center justify-center bg-black'>
+          <h2 className='m-1 text-xl font-semibold text-white'>PROJECTS</h2>
+        </div>
+        <div className='mt-4 space-y-2 text-lg'>
+          <div>
+            <h2 className='font-semibold'>Link Manager</h2>
+            <p className='mb-4'>
+              Developed a Link Manager web application using{' '}
+              <span className='font-semibold'>
+                HTML, TailwindCSS, shadcn/ui, TypeScript, React, and Vite.
+              </span>{' '}
+              Implemented dynamic adding, editing, and deleting of links.
+            </p>
+            <p>Created a responsive and user-friendly interface.</p>
+          </div>
+          <div className='mt-4'>
+            <h2 className='font-semibold'>Pit Stop App</h2>
+            <p className='mb-4'>
+              Developed an application for the{' '}
+              <span className='font-semibold'>Pit Stop</span> store on my own
+              initiative. Built core features for displaying products, catalogs, and
+              interactive UI elements.
+            </p>
+            <p>
+              Utilized React and TailwindCSS for fast development and easy styling.
+            </p>
           </div>
         </div>
       </section>
