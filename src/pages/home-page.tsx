@@ -60,6 +60,17 @@ export const HomePage = () => {
               LinkedIn
             </a>
           </p>
+          <p>
+            <a
+              href='https://github.com/WebDevelpr'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='flex items-center gap-1 text-blue-500 transition hover:underline'
+            >
+              <Link />
+              GitHub
+            </a>
+          </p>
         </div>
       </section>
 
