@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react'
 import { Suspense } from 'react'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
@@ -31,5 +32,10 @@ const router = createBrowserRouter([
 ])
 
 export const App = () => {
-  return <RouterProvider router={router} />
+  return (
+    <>
+      <RouterProvider router={router} />
+      <Analytics />
+    </>
+  )
 }
