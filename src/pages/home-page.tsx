@@ -151,7 +151,6 @@ export const HomePage = () => {
           </div>
         </div>
       </section>
-
       <section
         ref={skillsRef}
         className={`container mt-12 transition-all duration-700 ease-out ${
@@ -223,10 +222,6 @@ export const HomePage = () => {
           <div>
             <h2 className='mb-1 font-semibold'>English</h2>
             <Progress value={langVisible ? 85 : 0} />
-          </div>
-          <div>
-            <h2 className='mb-1 font-semibold'>Russian</h2>
-            <Progress value={langVisible ? 95 : 0} />
           </div>
           <div>
             <h2 className='mb-1 font-semibold'>Polish</h2>

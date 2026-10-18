@@ -1,20 +1,20 @@
 import { Analytics } from '@vercel/analytics/react'
 import { Suspense } from 'react'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-
-import './index.css'
-import { Layout } from './layout/layout'
-import { HomePage } from './pages/home-page'
-import NotFoundPage from './pages/not-found'
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Layout />,
-    children: [
-      {
-        index: true,
-        element: <HomePage />
+                                                                                        
+import './index.css'                                                                                        
+import { Layout } from './layout/layout'                                                                                        
+import { HomePage } from './pages/home-page'                                                                                        
+import NotFoundPage from './pages/not-found'                                                                                        
+                                                                              
+const router = createBrowserRouter([                                                                                        
+  {                                                                                        
+    path: '/',                                                                                        
+    element: <Layout />,                                                                                                  
+    children: [                                                                                        
+      {                                                                                        
+        index: true,                                                                                        
+        element: <HomePage />                                                                                        
       },
       {
         path: '*',

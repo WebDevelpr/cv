@@ -20,6 +20,7 @@
   "importOrder": [
     "<THIRD_PARTY_MODULES>",
     "^assets/(.*)$",
+
     "^components/(.*)$",
     "^constants/(.*)$",
     "^config/(.*)$",

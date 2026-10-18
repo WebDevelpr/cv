@@ -7,7 +7,6 @@ export const Header = () => {
         <h1 className='text-center text-2xl font-bold sm:text-left sm:text-4xl lg:text-6xl'>
           DMYTRO LEBEICHUK
         </h1>
-
         <img
           src={avatar}
           alt='Avatar'
